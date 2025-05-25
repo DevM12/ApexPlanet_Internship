@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-2</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-container">
+            <h1 class="heading">Intermidiate Level of Web Development</h1>
+            <br />
+            <button id="todo-list-button">ToDo-List</button>
+            <button id="contact-us-button">Contact-Us</button>
+        </div>
+
+        <div id="todo-list-container">
+            <h1 id="todo-list-form-heading">ToDo List</h1>
+            <form action="" id="todo-form">
+                <div id="todo-form-group">
+                    <input type="text" id="todo-input" placeholder="Enter your task" required>
+                    <button id="todo-submit-btn">Submit</button>
+                </div>
+            </form>
+            <ol id="todo-list"></ol>
+        </div>
+
+        <div id="contact-form-container" class="contact-form-container">
+            <form action="" class="contact-form" id="contact-form">
+                <h2 class="contact-form-heading">Contact Us</h2>
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                    <input type="text" id="message" placeholder="Enter your message" required>
+                </div>
+                <button id="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+
+</html>

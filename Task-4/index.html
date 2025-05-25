@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="bg-decoration"></div>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#about" onclick="scrollToSection('about')">About</a></li>
+                <li><a href="#projects" onclick="scrollToSection('projects')">Projects</a></li>
+                <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Dev Malhotra</h2>
+            <div class="about-content">
+                <div class="profile-image floating">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDMwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjMUExQTFBIi8+CjxjaXJjbGUgY3g9IjE1MCIgY3k9IjEyMCIgcj0iNDAiIGZpbGw9IiNFMEUwRTAiLz4KPHBhdGggZD0iTTEwMCAyMDBDMTAwIDE3Mi4zODYgMTIyLjM4NiAxNTAgMTUwIDE1MEMxNzcuNjE0IDE1MCAyMDAgMTcyLjM4NiAyMDAgMjAwVjI1MEgxMDBWMjAwWiIgZmlsbD0iI0UwRTBFMCIvPgo8L3N2Zz4K"
+                        alt="Profile">
+                </div>
+                <div class="about-text">
+                    <h3>Full Stack Developer</h3>
+                    <p>Welcome to my portfolio! I'm a passionate full stack developer with expertise in modern web
+                        technologies. I love creating interactive, user-friendly applications that solve real-world
+                        problems.</p>
+                    <p>My journey in web development has led me to master various technologies and frameworks, always
+                        staying up-to-date with the latest trends and best practices in the industry.</p>
+
+                    <div class="skills">
+                        <div class="skill-item">
+                            <div class="skill-name">HTML5 / CSS3</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">BootStrap / TailWind / Responsive Design</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">JavaScript / TypeScript</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="60"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">ReactJS / Redux</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="55"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Node.js / Express / RESTful APIs</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="55"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">MongoDB / MongoDB Atlas</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">Git / GitHub</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="65"></div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-name">Authentication / AJAX</div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="50"></div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-name">Python</div>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" data-width="55"></div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+
+            <!-- Todo App Demo -->
+            <div class="todo-section">
+                <h3 style="color: #00d4ff; margin-bottom: 1rem;">Interactive Todo App (with Local Storage)</h3>
+                <div class="todo-input-container">
+                    <input type="text" id="todoInput" class="todo-input" placeholder="Enter a new task...">
+                    <button class="btn" onclick="addTodo()">Add Task</button>
+                </div>
+                <div id="todoList" class="todo-list"></div>
+            </div>
+
+            <!-- Product Listing Demo -->
+            <div class="product-section">
+                <h3 style="color: #00d4ff; margin-bottom: 1rem;">Product Listing with Filters & Sorting</h3>
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="categoryFilter">Category:</label>
+                        <select id="categoryFilter" onchange="filterProducts()">
+                            <option value="">All Categories</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Clothing">Clothing</option>
+                            <option value="Books">Books</option>
+                            <option value="Home">Home</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="minPrice">Min Price:</label>
+                        <input type="number" id="minPrice" placeholder="0" onchange="filterProducts()">
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="maxPrice">Max Price:</label>
+                        <input type="number" id="maxPrice" placeholder="1000" onchange="filterProducts()">
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="sortBy">Sort by:</label>
+                        <select id="sortBy" onchange="sortProducts()">
+                            <option value="name">Name</option>
+                            <option value="price-low">Price (Low to High)</option>
+                            <option value="price-high">Price (High to Low)</option>
+                            <option value="rating">Rating</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="productsGrid" class="products-grid"></div>
+            </div>
+
+            <!-- Other Projects -->
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3 class="project-title">Yelp-Camp Clone</h3>
+                    <p class="project-description">Integrated secure user authentication and database management
+                        using MongoDB. Also includes authentication, authorization, and Full
+                        Create, Read, Update, and Delete (CRUD) functionality
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">MongoDB Atlas</span>
+                        <span class="tech-tag">AJAX</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://yelpcamp-clone-93cq.onrender.com/" class="project-link">Live Demo →</a>
+                        <a href="https://github.com/DevM12/YelpCamp-Clone" class="project-link">GitHub →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">Google Maps Clone</h3>
+                    <p class="project-description">Built a Google Maps replica using Leaflet for interactive mapping.
+                    Integrated TypeScript to enhance development efficiency.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Leaflet</span>
+                        <span class="tech-tag">TailWind</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/DevM12/GoogleMapsClone-" class="project-link">GitHub →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">Mini-Projects</h3>
+                    <p class="project-description">Created some mini projects using React.js, JavaScript, HTML, CSS, JavaScript and uploaded on my GitHub</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML / CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Others</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/DevM12" class="project-link">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>devmalhotra3123@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 8178471544</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>New Delhi, India</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p>linkedin.com/in/dev-malhotra-579159202</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="app.js"></script>
+
+</html>
