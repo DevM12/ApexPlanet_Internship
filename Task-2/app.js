@@ -10,7 +10,7 @@ todoListContainer.style.display = "none"
 
 //ToDo List elements
 const todoForm = document.getElementById("todo-form");
-const todoInput=document.getElementById("todo-input");
+const todoInput = document.getElementById("todo-input");
 const todoList = document.getElementById("todo-list");
 
 
@@ -40,7 +40,7 @@ todoListButton.addEventListener('click', function () {
 });
 
 //todo list logic
-const todos=[]
+const todos = []
 function createTodoItem(todoText, index) {
     const li = document.createElement("li");
     li.textContent = todoText;
@@ -96,14 +96,13 @@ function validateForm() {
     }
     if (!validateEmail(emailInput.value)) {
         alert("Please enetr a valid email address!!")
+        return false;
     }
     return true;
 }
 submitButton.onclick = function (evt) {
     evt.preventDefault();
     if (validateForm()) {
-        console.log("Name:" + nameInput.value)
-        console.log("Email:" + emailInput.value)
-        console.log("Message:" + messageInput.value)
+        alert("Thank you " + nameInput.value + " for contacting us");
     }
 }
